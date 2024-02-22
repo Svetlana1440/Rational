@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Rational.h"
+#include "Rational/Rational.h"
 
 using namespace std;
 int main() {
