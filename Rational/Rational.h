@@ -3,13 +3,11 @@
 using namespace std;
 #ifndef _RATIONAL_H
 #define _RATIONAL_H
-class Rational
-{
+class Rational {
 	public:
 	int denom, numer;
 	Rational();
 	Rational(int number);
-	Rational(double number);
 	Rational(int n, int d);
 	Rational& operator =(const Rational& r);
 	Rational& operator +=(const Rational& r);
@@ -39,7 +37,6 @@ class Rational
 	Rational the_common_denominator(const Rational& r);
 
 	//Функции степени и нахождения корня;
-	Rational finding_the_root();
 	Rational finding_the_pow(int x);
 
 	operator int() const;
@@ -47,11 +44,9 @@ class Rational
 
 	friend istream& operator >>(istream& in, Rational& r);
 	friend ostream& operator <<(ostream& out, const Rational& r);
-
-
 };
 
-void equation(Rational a, Rational b, Rational c);
-
-
+Rational finding_the_sqrt(Rational a);
+Rational abs(Rational x);
+Rational round(Rational r);
 #endif
